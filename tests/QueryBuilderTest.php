@@ -201,10 +201,7 @@ class QueryBuilderTest extends TestCase
         $this->assertCount(1, $users);
         $this->assertEquals('John Doe', $users[0]['name']);
         
-        //Check with multiple wheres with and condition
-        $users = DB::collection('users')->where('address.country', 'Belgium')->where('address.city', 'Ghent')->get();
-        $this->assertCount(1, $users);
-        $this->assertEquals('John Doe', $users[0]['name']);
+    
         
     }
 
